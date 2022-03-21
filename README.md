@@ -1,6 +1,4 @@
-# RuraLoc
-
-Sistema de gerenciamento de vídeos que está sendo desenvolvida com a turma de Programação Web 2021-2
+# RuraLoc - Sistema de gerenciamento de Salas
 
 ## Instalação do Desenvolvimento
 

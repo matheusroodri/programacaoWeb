@@ -25,7 +25,7 @@ npm install
 ## Execução
 
 ```console
-npm ace serve --watch
+node ace serve --watch
 ```
 
 ### Videos das aulas

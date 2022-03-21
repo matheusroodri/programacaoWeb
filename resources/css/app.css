@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+div input{
+    display: block;
+    border-color: red !important;
+}

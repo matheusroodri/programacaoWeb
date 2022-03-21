@@ -1,6 +1,7 @@
+<link rel ="stylesheet" href="app.css">
 <div>
   <legend>{{ title }}</legend>
-  <input
+  <input style="border-color:red;"
   @if(flashMessages.has(`errors.${name}`))
   style="border: 1px solid red"
   @endif

@@ -23,5 +23,7 @@ npm install
 ## Execução
 
 ```console
+npm install
+
 node ace serve --watch
 ```

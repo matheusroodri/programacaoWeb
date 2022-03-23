@@ -37,6 +37,7 @@ Route.post('/videos', 'VideosController.store').middleware('auth:web').as('video
 
 Route.get('/login', 'SessionsController.create').as('sessions.create')
 Route.post('/login', 'SessionsController.store').as('sessions.store')
+Route.post('/login/backoffice', 'SessionsController.store').as('sessions.store.backoffice')
 Route.get('/logout',async ({ view }) => {
   return view.render('index')
 }).as('sessions.destroy')

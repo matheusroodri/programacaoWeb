@@ -15,7 +15,38 @@
   @!component('layouts/partials/header-mapa')
   <main>
     <section class="text-gray-600 body-font relative">
-    
+      <form>
+            <p><strong>Salas</strong><p>  				
+                <label for="bloco">Bloco</label>
+                <select name="Bloco">
+                  <option value="NULL"></option>
+                  <option value="informatica">Informatica</option>
+                  <option value="multimidia">Multimidia</option>
+                  <option value="administração">Administração</option>
+                  <option value="biblioteca">Biblioteca</option>
+                </select> 
+                <br>
+                <label for="Andar">Andar</label>
+                <select name="Andar">
+                  <option value="NULL"></option>
+                  <option value="primeiroandar">Primeiro Andar</option>
+                  <option value="segundoandar">Segundo Andar</option>
+                  <option value="terceiroandar">Terceiro Andar</option>
+                </select> 		
+                <br>
+                <label for="projetor">Projetor</label>
+                <input type="checkbox" id="projetor" name="projetor">		
+                <br>
+                <label for="ar-condicionado">Ar condicionado</label>  
+                <input type="checkbox" id="ar-condicionado" name="ar-condicionado">	 
+                <br>
+                <label for="data">Data
+                <svg class="h-8 w-8 text-blue-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="5" width="16" height="16" rx="2" />  <line x1="16" y1="3" x2="16" y2="7" />  <line x1="8" y1="3" x2="8" y2="7" />  <line x1="4" y1="11" x2="20" y2="11" />  <rect x="8" y="15" width="2" height="2" /></svg>
+                </label>  	
+                <label for="horarios">Horários
+                <svg class="h-8 w-8 text-blue-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <polyline points="12 6 12 12 16 14" /></svg>
+                </label>      
+      </form>
     </section>
   </main>
 </body>

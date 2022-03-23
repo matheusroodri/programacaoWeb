@@ -1,4 +1,4 @@
-@layout('layouts/main')
+@layout('layouts/main-create')
 
 @set('title', 'Criar Usuário')
 
@@ -16,4 +16,5 @@
     @!form.button({ name: 'Cadastrar' })
   </fieldset>
 </form>
+<a class="mr-5 hover:text-gray-900" href="{{ route('index')}}">Voltar</a>
 @endsection

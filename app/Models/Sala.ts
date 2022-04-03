@@ -1,18 +1,18 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 
-export default class Video extends BaseModel {
+export default class Sala extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
   @column()
-  public title: string
+  public capacidade: number
 
   @column()
-  public description: string
+  public projetor: boolean
 
   @column()
-  public youtubeKey: string
+  public condicionado: boolean
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

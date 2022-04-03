@@ -1,7 +1,7 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import Course from 'App/Models/Course'
+import Sala from 'App/Models/Sala'
 
-export default class CoursesController {
+export default class SalasController {
   public async index({}: HttpContextContract) {}
 
   public async create({}: HttpContextContract) {}
@@ -9,9 +9,9 @@ export default class CoursesController {
   public async store({}: HttpContextContract) {}
 
   public async show({ params, view }: HttpContextContract) {
-    const course = await Course.find(params.id)
+    const sala = await Sala.find(params.id)
 
-    return view.render('course/show', { name: course?.name, description: course?.description })
+    return view.render('sala/show', { id: sala?.id, capacidade: sala?.capacidade })
   }
 
   public async edit({}: HttpContextContract) {}

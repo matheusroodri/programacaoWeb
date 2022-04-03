@@ -24,15 +24,15 @@ Route.get('/', async ({ view }) => {
   return view.render('index')
 }).as('index')
 
-Route.get('/courses/:id', 'CoursesController.show')
+Route.get('/salas/:id', 'SalasController.show')
 
-// Rotas dos Videos
-Route.get('/videos/create', 'VideosController.create').as('videos.create')
-Route.get('/videos/:id', 'VideosController.show')
+// Rotas dos Reservas
+Route.get('/reservas/create', 'ReservasController.create').as('reservas.create')
+Route.get('/reservas/:id', 'ReservasController.show')
   .where('id', /^[0-9]$/)
-  .as('videos.show')
-Route.get('/videos', 'VideosController.index').middleware('auth:web').as('videos.index')
-Route.post('/videos', 'VideosController.store').middleware('auth:web').as('videos.store')
+  .as('reservas.show')
+Route.get('/reservas', 'ReservasController.index').middleware('auth:web').as('reservas.index')
+Route.post('/reservas', 'ReservasController.store').middleware('auth:web').as('reservas.store')
 
 
 Route.get('/login', 'SessionsController.create').as('sessions.create')

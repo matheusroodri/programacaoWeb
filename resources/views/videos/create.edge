@@ -5,8 +5,8 @@
 
 @section('content')
 
-<p>Criar Video
-<form action="{{ route('videos.store') }}" method="post">
+<p>Criar Reserva
+<form action="{{ route('reservas.store') }}" method="post">
   {{ csrfField() }}
   <fieldset>
     @!form.input({ title: 'Título', name: 'title', type: 'text' })
@@ -17,7 +17,7 @@
 
     @!form.button({ name: 'Criar' })
 
-    <a href="{{ route('videos.index') }}">Cancelar</a>
+    <a href="{{ route('reservas.index') }}">Cancelar</a>
   </fieldset>
 </form>
 @endsection

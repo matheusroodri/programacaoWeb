@@ -1,14 +1,14 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
-export default class Videos extends BaseSchema {
-  protected tableName = 'videos'
+export default class Reservas extends BaseSchema {
+  protected tableName = 'salas'
 
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
-      table.increments('id')
-      table.string('title').notNullable()
-      table.string('description').notNullable()
-      table.string('youtube_key').notNullable()
+      table.increments('id').primary()
+      table.integer('capacidade').notNullable()
+      table.boolean('projetor').notNullable()
+      table.boolean('condicionado').notNullable()
 
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL

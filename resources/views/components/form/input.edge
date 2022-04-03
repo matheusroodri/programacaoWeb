@@ -1,7 +1,7 @@
 <link rel ="stylesheet" href="app.css">
-<div>
-  <legend>{{ title }}</legend>
-  <input style="border-color:red;"
+<div >
+  <legend class=" text-white">{{ title }}</legend>
+  <input class="w-full p-1 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-900 mb-2 my-1"
   @if(flashMessages.has(`errors.${name}`))
   style="border: 1px solid red"
   @endif

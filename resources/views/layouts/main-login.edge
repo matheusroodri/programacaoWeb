@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,17 +11,14 @@
   @entryPointStyles('app')
   @entryPointScripts('app')
 </head>
-<body>
-  <main>
-    <section class="text-gray-600 body-font relative">
-      <div class="text-center" style="font-size:40px; margin-top:25px; top:20px;">RuraLoc</div>
-      <div class="container px-5 py-10 mx-auto">
-        <div class="flex flex-col text-center w-full mb-12">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">{{ title }}</h1>
-        </div>
-        <div class="lg:w-1/2 md:w-2/3 mx-auto">
-          @!section('content')
-        </div>
+<body >
+  <main class="h-screen overflow-hidden flex items-center justify-center bg-gray-800" >
+    <section class="text-gray-400 body-font relative justify-center bg-gray-800 items-center w-72  "> 
+      <div class="max-w-md w-full bg-gray-900 rounded p-6 space-y-4">
+          <p class="text-center text-5xl font-bold m-4 text-gray-400 pb-10">RurAloc</p>
+          <div class="lg:md:w-2/3 mx-auto m-4">
+            @!section('content')
+          </div>
       </div>
     </section>
   </main>

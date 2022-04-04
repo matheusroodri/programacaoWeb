@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,41 +11,41 @@
   @entryPointStyles('app')
   @entryPointScripts('app')
 </head>
-<body>
+<body >
   @!component('layouts/partials/header-mapa')
-  <main>
-    <section class="text-gray-600 body-font relative px-8 mx-auto">
-      <form>
-            <p><strong>Salas</strong><p>  				
-                <label for="bloco">Bloco</label>
-                <select name="Bloco">
-                  <option value="NULL"></option>
-                  <option value="informatica">Informatica</option>
-                  <option value="multimidia">Multimidia</option>
-                  <option value="administração">Administração</option>
-                  <option value="biblioteca">Biblioteca</option>
-                </select> 
+  <main  class="h-screen overflow-hidden bg-gray-800">
+    <section class="text-gray-400 body-font bg-gray-800 items-center w-72">
+      <form  class="max-w-md w-full bg-gray-900 rounded p-6 space-y-4 h-screen">
+            <p class="text-center text-5xl font-bold m-4 text-gray-600 pb-10">Salas</p>  
+                  <label for="bloco" class="font-medium text-white m-2">Bloco: </label>
+                  <select name="Bloco" class="rounded-md w-50">
+                    <option value="NULL" class="text-gray-700">Selecione um Bloco</option>
+                    <option value="informatica" class="text-black">Informatica</option>
+                    <option value="multimidia" class="text-black">Multimidia</option>
+                    <option value="administração" class="text-black">Administração</option>
+                    <option value="biblioteca" class="text-black">Biblioteca</option>
+                  </select> 
                 <br>
-                <label for="Andar">Andar</label>
-                <select name="Andar">
-                  <option value="NULL"></option>
-                  <option value="primeiroandar">Primeiro Andar</option>
-                  <option value="segundoandar">Segundo Andar</option>
-                  <option value="terceiroandar">Terceiro Andar</option>
+                <label for="Andar"  class="font-medium text-white m-2">Andar:</label>
+                <select name="Andar" class="rounded-md w-50">
+                  <option value="NULL">Selecione um Andar</option>
+                  <option value="primeiroandar"class="text-black">Primeiro Andar</option>
+                  <option value="segundoandar" class="text-black">Segundo Andar</option>
+                  <option value="terceiroandar" class="text-black">Terceiro Andar</option>
                 </select> 		
                 <br>
-                <label for="projetor">Projetor</label>
-                <input type="checkbox" id="projetor" name="projetor">		
+                <input type="checkbox" id="projetor" name="projetor" class="m-2">	
+                <label for="projetor">Projetor</label>	
                 <br>
-                <label for="ar-condicionado">Ar condicionado</label>  
-                <input type="checkbox" id="ar-condicionado" name="ar-condicionado">	 
+                <input type="checkbox" id="ar-condicionado" name="ar-condicionado" class="m-2">
+                <label for="ar-condicionado">Ar condicionado</label>  	 
                 <br>
-                <label for="data">Data
+                <label for="data" class="m-2">Data: 
                 <svg class="h-8 w-8 text-blue-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="5" width="16" height="16" rx="2" />  <line x1="16" y1="3" x2="16" y2="7" />  <line x1="8" y1="3" x2="8" y2="7" />  <line x1="4" y1="11" x2="20" y2="11" />  <rect x="8" y="15" width="2" height="2" /></svg>
-                </label>  	
+                </label>
                 <label for="horarios">Horários
                 <svg class="h-8 w-8 text-blue-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <polyline points="12 6 12 12 16 14" /></svg>
-                </label>      
+                </label>    
       </form>
     </section>
   </main>

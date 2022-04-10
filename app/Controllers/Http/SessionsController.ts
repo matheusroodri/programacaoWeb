@@ -24,6 +24,6 @@ export default class UsersController {
 
   public async destroy({ response, auth }: HttpContextContract) {
     await auth.use('web').logout()
-    response.redirect().toRoute('sessions.create')
+    response.redirect().toRoute('index')
   }
 }

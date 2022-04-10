@@ -26,7 +26,7 @@ Route.get('/', async ({ view }) => {
 
 Route.get('/salas/:id', 'SalasController.show')
 
-// Rotas dos Reservas
+// Rotas das Reservas
 Route.get('/reservas/create', 'ReservasController.create').as('reservas.create')
 Route.get('/reservas/:id', 'ReservasController.show')
   .where('id', /^[0-9]$/)
@@ -38,9 +38,7 @@ Route.post('/reservas', 'ReservasController.store').middleware('auth:web').as('r
 Route.get('/login', 'SessionsController.create').as('sessions.create')
 Route.post('/login', 'SessionsController.store').as('sessions.store')
 Route.post('/login/backoffice', 'SessionsController.store').as('sessions.store.backoffice')
-Route.get('/logout',async ({ view }) => {
-  return view.render('index')
-}).as('sessions.destroy')
+Route.get('/logout','SessionsController.destroy').as('sessions.destroy')
 
 Route.get('/users/create', 'UsersController.create').as('users.create')
 Route.post('/users/', 'UsersController.store').as('users.store')

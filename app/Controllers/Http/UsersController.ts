@@ -17,7 +17,7 @@ export default class UsersController {
 
     const user = await User.create({ email: data.email, password: data.password })
 
-    return view.render('users.create')
+    return view.render('index')
   }
 
   public async show({}: HttpContextContract) {}

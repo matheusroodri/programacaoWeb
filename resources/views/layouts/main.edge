@@ -11,14 +11,15 @@
   @entryPointStyles('app')
   @entryPointScripts('app')
 </head>
+<script src="https://unpkg.com/flowbite@1.4.1/dist/datepicker.js"></script>
 <body >
   @!component('layouts/partials/header-mapa')
   <main  class="h-screen overflow-hidden bg-gray-800">
-    <section class="text-gray-400 body-font bg-gray-800 items-center w-72">
+    <section class="text-gray-400 body-font bg-gray-800 items-center w-80">
       <form  class="max-w-md w-full bg-gray-900 rounded p-6 space-y-4 h-screen">
             <p class="text-center text-5xl font-bold text-gray-200">Salas</p>  
                   <label for="bloco" class="font-medium text-white">Bloco: </label>
-                  <select name="Bloco" class="rounded-md w-50">
+                  <select name="Bloco" class="rounded-md w-50 text-black">
                     <option value="NULL" class="text-gray-700">Selecione um Bloco</option>
                     <option value="informatica" class="text-black">Informatica</option>
                     <option value="multimidia" class="text-black">Multimidia</option>
@@ -27,7 +28,7 @@
                   </select> 
                 <br>
                 <label for="Andar"  class="font-medium text-white">Andar:</label>
-                <select name="Andar" class="rounded-md w-50">
+                <select name="Andar" class="rounded-md w-50 text-black">
                   <option value="NULL">Selecione um Andar</option>
                   <option value="primeiroandar"class="text-black">Primeiro Andar</option>
                   <option value="segundoandar" class="text-black">Segundo Andar</option>
@@ -41,7 +42,21 @@
                 <label for="ar-condicionado" class="text-white">Ar condicionado</label>  	 
                 <br>
                 <label for="data" class="text-white">Data: 
-                <svg class="h-8 w-8 text-blue-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="5" width="16" height="16" rx="2" />  <line x1="16" y1="3" x2="16" y2="7" />  <line x1="8" y1="3" x2="8" y2="7" />  <line x1="4" y1="11" x2="20" y2="11" />  <rect x="8" y="15" width="2" height="2" /></svg>
+                  <div date-rangepicker="" class="flex items-center">
+                    <div class="relative">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 datepicker-input" placeholder="Inicio">
+                    </div>
+                    <span class="mx-4 text-white">-></span>
+                    <div class="relative">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 datepicker-input" placeholder="Fim">
+                    </div>
+                    </div>
                 </label>
                 <label for="horarios" class="text-white">Horários
                 <svg class="h-8 w-8 text-blue-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <polyline points="12 6 12 12 16 14" /></svg>

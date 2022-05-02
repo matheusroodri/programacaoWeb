@@ -4,7 +4,7 @@ import UserCreateValidator from 'App/Validators/UserCreateValidator'
 
 export default class UsersController {
   public async create({ view }: HttpContextContract) {
-    return view.render('sessions/create')
+    return view.render('index')
   }
 
   public async store({ request, auth, response, session }: HttpContextContract) {
@@ -14,7 +14,8 @@ export default class UsersController {
     try {
       await auth.use('web').attempt(email, password)
       response.redirect().toRoute('index')
-    } catch {
+    } catch (e) {
+      console.log(e)
       session.flashExcept(['login'])
       session.flash({ errors: { login: 'Não encontramos nenhuma conta com essas credenciais.' } })
 
@@ -24,6 +25,6 @@ export default class UsersController {
 
   public async destroy({ response, auth }: HttpContextContract) {
     await auth.use('web').logout()
-    return response.redirect().toRoute('index')
+    return response.redirect().toRoute('/login')
   }
 }

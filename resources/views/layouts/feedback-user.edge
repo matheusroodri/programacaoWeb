@@ -1,0 +1,17 @@
+@layout('layouts/feedback-layout')
+
+
+@section('content')
+
+<form action="{{ route('feedback.store') }}" method="POST">
+  {{ csrfField() }}
+  <fieldset>
+    @!form.input({ title: 'Numero da Sala/Lab:', name: 'sala', type: 'number' })
+
+    @!form.input({ title: 'Descrição:', name: 'descricao', type: 'text' })
+
+    @!form.button({ name: 'Cadastrar' })
+  </fieldset>
+</form>
+<a class="text-sm text-blue-600 hover:underline" href="{{ route('index')}}">Voltar</a>
+@endsection

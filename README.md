@@ -1,4 +1,4 @@
-# RuraLoc - Sistema de gerenciamento de Salas
+# RurAloc - Sistema de gerenciamento de Salas
 
 ## Instalação do Desenvolvimento
 

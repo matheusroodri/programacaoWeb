@@ -27,6 +27,7 @@ Route.group(() => {
     return view.render('layouts/main')
   }).as('index')
   Route.get('/salas/:id', 'SalasController.show')
+  Route.get('/salas/show', 'SalasController.show').as('sala.show')
   Route.get('/reservas/create', 'ReservasController.create').as('reservas.create')
   Route.get('/reservas/:id', 'ReservasController.show')
     .where('id', /^[0-9]$/)

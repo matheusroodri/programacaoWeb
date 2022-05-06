@@ -1,5 +1,6 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Sala from 'App/Models/Sala'
+import User from 'App/Models/User'
 
 export default class SalasController {
   public async index({}: HttpContextContract) {}
@@ -8,10 +9,10 @@ export default class SalasController {
 
   public async store({}: HttpContextContract) {}
 
-  public async show({ params, view }: HttpContextContract) {
-    const sala = await Sala.find(params.id)
+  public async show({view }: HttpContextContract) {
+    const sala = await Sala.all()
 
-    return view.render('sala/show', { id: sala?.id, capacidade: sala?.capacidade })
+    return view.render('salas/show', { salas : sala})
   }
 
   public async edit({}: HttpContextContract) {}

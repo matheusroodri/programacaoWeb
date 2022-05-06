@@ -15,11 +15,7 @@
 <body >
   @!component('layouts/partials/header-mapa')
   <main  class="h-screen overflow-hidden bg-gray-800">
-  @section('content')
-    @each(sala in salas)
-      <p>{{ sala.id }}</p>
-    @endeach
-    @endsection
+  
     <section class="text-gray-400 body-font bg-gray-800 items-center w-80">
       <form  class="max-w-md w-full bg-gray-900 rounded p-6 space-y-4 h-screen">
             <p class="text-center text-5xl font-bold text-gray-200">Salas</p>  
@@ -75,9 +71,20 @@
                     <option value="20/22" class="text-black">20:00 / 22:00 PM</option>
                   </select>                 
                 </label>    
+               
       </form>
+      
     </section>
     
   </main>
+   @section('content')
+    @each(sala in salas)
+      <p align="center">{{ sala.id }}</p>
+      <p align="center">{{ sala.capacidade }}</p>
+      <p align="center">{{ sala.projetor }}</p>
+      <p align="center">{{ sala.condicionado }}</p>
+      <p></p>
+    @endeach
+    @endsection
 </body>
 </html>

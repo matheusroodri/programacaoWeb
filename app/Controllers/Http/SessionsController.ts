@@ -8,14 +8,14 @@ export default class SessionsController {
     return view.render('index')
   }
 
-  public async store({ request, auth, response, session }: HttpContextContract) {
+  public async store({ request, auth, response, session, view}: HttpContextContract) {
     const email = request.input('email')
     const password = request.input('password')
     const salas = await Sala.all()
 
     try {
       await auth.use('web').attempt(email, password)
-      return response.redirect().toRoute('index', { salas : salas })
+      return view.render('layouts/main', { salas : salas})
     } catch (e) {
       console.log(e)
       session.flashExcept(['login'])

@@ -5,7 +5,7 @@ export default class Reservas extends BaseSchema {
 
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
-      table.increments('id').primary()
+      table.integer('id').primary()
       table.integer('capacidade').notNullable()
       table.boolean('projetor').notNullable()
       table.boolean('condicionado').notNullable()

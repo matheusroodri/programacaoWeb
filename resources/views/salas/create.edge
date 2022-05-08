@@ -1,23 +1,17 @@
-@layout('layouts/main')
-
-@set('title', 'Criar Vídeo')
-@set('title', 'Coloque os campos do vídeo para a sua criação')
+@layout('layouts/sala-layout')
 
 @section('content')
 
-<p>Criar Reserva
-<form action="{{ route('reservas.store') }}" method="post">
+<form action="{{ route('criarsala.store') }}" method="POST">
   {{ csrfField() }}
   <fieldset>
-    @!form.input({ title: 'Título', name: 'title', type: 'text' })
+    @!form.input({ title: 'Numero da Sala/Lab:', name: 'id', type: 'number' })
+    @!form.input({ title: 'Capacidade:', name: 'cap', type: 'number' })
+    @!form.input({ title: 'Projetor:', name: 'projetor', type: 'checkbox' })
+    @!form.input({ title: 'Ar Condicionado:', name: 'condicionado', type: 'checkbox' })
 
-    @!form.input({ title: 'Descrição', name: 'description', type: 'text' })
-
-    @!form.input({ title: 'Youtube Key', name: 'youtubeKey', type: 'text' })
-
-    @!form.button({ name: 'Criar' })
-
-    <a href="{{ route('reservas.index') }}">Cancelar</a>
+    @!form.button({ name: 'Cadastrar' })
   </fieldset>
 </form>
+<a class="text-sm text-blue-600 hover:underline" href="{{ route('index')}}">Voltar</a>
 @endsection

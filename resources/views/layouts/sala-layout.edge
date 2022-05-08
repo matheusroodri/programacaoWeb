@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RurAloc</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  @entryPointStyles('app')
+  @entryPointScripts('app')
+</head>
+<body>
+  <main class="h-screen overflow-hidden flex items-center justify-center bg-gray-800">
+    <section class="text-gray-400 body-font relative justify-center bg-gray-800 items-center w-72  ">
+      <div class="max-w-md w-full bg-gray-900 rounded p-6 space-y-4">
+        <p class="text-center text-3xl font-bold m-4 text-gray-200">Criar Sala</p>
+        
+          <div class="lg:md:w-2/3 mx-auto m-4">
+            @!section('content')
+          </div>
+      </div>
+    </section>
+  </main>
+  @!component('layouts/partials/footer')
+</body>
+</html>

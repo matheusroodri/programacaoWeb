@@ -36,7 +36,10 @@ Route.group(() => {
   Route.post('/reservas', 'ReservasController.store').middleware('auth:web').as('reservas.store')
   Route.get('/logout','SessionsController.destroy').as('sessions.destroy')
   Route.get('layouts/feedback-user', 'FeedBackController.create').middleware('auth:web').as('feedback.index')
+  Route.get('layouts/feedback-user-admin', 'FeedBackController.index').middleware('auth:web').as('feedbackadmin.index')
   Route.post('/', 'FeedBackController.store').middleware('auth:web').as('feedback.store')
+  Route.get('/admin/criarsala', 'SalasController.create').middleware('auth:web').as('criarsala.index')
+  Route.post('/admin/criarsala', 'SalasController.store').middleware('auth:web').as('criarsala.store')
 })
   .middleware('auth')
 

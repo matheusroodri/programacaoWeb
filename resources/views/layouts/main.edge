@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Salas - UFRRJ </title>
+        <title>RurAloc</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <style>
       @charset "UTF-8";
-/
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11300,8 +11300,8 @@ textarea.form-control-lg {
                     @if(admin == 1)
                     <form class="d-flex">
                       <a class="btn btn-outline-dark" href="{{ route('criarsala.index') }}" type="submit">
-                          <i>
-                          Criar Salas</i>
+                          <i></i>
+                          Criar Salas
                           <span></span>
                       </a>
                     </form>
@@ -11353,12 +11353,10 @@ textarea.form-control-lg {
                     <img class="card-img-top" src="https://user-images.githubusercontent.com/99137194/167181333-a16cbfbc-ac59-46bd-a66b-62f0801dc5c6.png" alt="..." />
                     <div class="card-body p-4">
                         <div class="text-center">
-                            <h5 class="fw-bolder">Sala: {{sala.id}}</h5>
-                            <p></p>
-                              <ul>Capacidade: {{sala.capacidade}}</ul>
-                              <ul>Projetor: {{sala.projetor}} </ul>
-                              <ul>Ar Condicionado: {{sala.condicionado}}</ul>
-                          
+                            <h5 class="fw-bolder">Sala/Lab Nº: {{sala.id}}</h5>
+                              <p>Capacidade: {{sala.capacidade}}</p>
+                              <p>Projetor: {{sala.projetor}}</p>
+                              <p>Ar Condicionado: {{sala.condicionado}}</p>
                         </div>
                     </div>
                     @if(admin == 0)

@@ -5,7 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Salas - u</title>
+<<<<<<< HEAD
+        <title>Salas - UFRRJ </title>
+=======
+        <title>RurAloc</title>
+>>>>>>> ae1b2fd9a6a20096a962051313965565b05c796d
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <style>
@@ -11293,7 +11297,7 @@ textarea.form-control-lg {
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">RurAloc</a>
+                <a class="navbar-brand" href="{{ route('sala.show') }}">RurAloc</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
@@ -11353,16 +11357,25 @@ textarea.form-control-lg {
                     <img class="card-img-top" src="https://user-images.githubusercontent.com/99137194/167181333-a16cbfbc-ac59-46bd-a66b-62f0801dc5c6.png" alt="..." />
                     <div class="card-body p-4">
                         <div class="text-center">
+<<<<<<< HEAD
                             <h5 class="fw-bolder">ala: {{sala.id}}</h5>
                             <p></p>
                               <ul>Capacidade: {{sala.capacidade}}</ul>
                               <ul>Projetor: {{sala.projetor}} </ul>
                               <ul>Ar Condicionado: {{sala.condicionado}}</ul>
+=======
+                            <h5 class="fw-bolder">Sala/Lab Nº: {{sala.id}}</h5>
+                              <p>Capacidade de Alunos: {{sala.capacidade}}</p>
+                              <p>Projetor: {{sala.projetor}}</p>
+                              <p>Ar Condicionado: {{sala.condicionado}}</p>
+>>>>>>> ae1b2fd9a6a20096a962051313965565b05c796d
                         </div>
                     </div>
+                    @if(admin == 0)
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Reservar</a></div>
                     </div>
+                    @endif
                     @endeach
                 </div>
             </div>
